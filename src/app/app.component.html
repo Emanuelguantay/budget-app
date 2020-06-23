@@ -1,9 +1,14 @@
-<app-head [budget]="budget" [income]="income" [expense]="expense" [expensePercentage]="expensePercentage"></app-head>
+<app-head 
+    [budget]="getBudgetTotal()" 
+    [income]="getIncomeTotal()" 
+    [expense]="getExpenseTotal()" 
+    [expensePercentage]="getPercentageTotal()">
+</app-head>
 <app-form></app-form>
 
 <div class="contenedor limpiarEstilos">
-    <app-income [incomeList]="incomeList"></app-income>
-    <app-expense [expenseList]="expenseList"></app-expense>
+    <app-income></app-income>
+    <app-expense [incomeTotal]="getIncomeTotal()"></app-expense>
 </div>
 
   
