@@ -4,8 +4,8 @@
     <div class="elemento limpiarEstilos" *ngFor="let expense of expenseList">
         <div class="elemento_descripcion">{{expense.description}}</div>
         <div class="right limpiarEstilos">
-            <div class="elemento_valor">- {{expense.value}}</div>
-            <div class="elemento_porcentaje">{{calculatePercentage(expense)}}%</div>
+            <div class="elemento_valor">- {{expense.value | currency:'ARG':'$':'1.2-2'}}</div>
+            <div class="elemento_porcentaje">{{calculatePercentage(expense) | percent}}</div>
             <div class="elemento_eliminar">
                 <button class="elemento_eliminar--btn"><i class="ion-ios-close-outline" (click)="deletedRecord(expense)"></i></button>
             </div>

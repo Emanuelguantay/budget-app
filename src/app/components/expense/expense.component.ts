@@ -26,9 +26,9 @@ export class ExpenseComponent {
 
   calculatePercentage(expense: Movement){
     var percentage = expense.value / this.incomeTotal;
-    var num = Number(percentage)
-    var roundedString = num.toFixed(2);
-    var rounded = Number(roundedString);
-    return rounded;
+    // var num = Number(percentage)
+    // var roundedString = num.toFixed(2);
+    // var rounded = Number(roundedString);
+    return percentage;
   }
 }

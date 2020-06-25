@@ -42,10 +42,10 @@ export class AppComponent {
 
   getPercentageTotal(){
     var percentage =  this.getExpenseTotal() / this.getIncomeTotal();
-    var num = Number(percentage)
-    var roundedString = num.toFixed(2);
-    var rounded = Number(roundedString);
-    return rounded;
+    // var num = Number(percentage)
+    // var roundedString = num.toFixed(2);
+    // var rounded = Number(roundedString);
+    return percentage;
   }
 
   getBudgetTotal(){

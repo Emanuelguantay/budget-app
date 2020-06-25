@@ -4,12 +4,12 @@
             Presupuesto Disponible:
         </div>
         
-        <div class="presupuesto_valor">{{budget}}</div>
+        <div class="presupuesto_valor">{{budget | currency:'ARG':'$':'1.2-2'}}</div>
         
         <div class="presupuesto_ingreso limpiarEstilos">
             <div class="presupuesto_ingreso--texto">Ingresos</div>
             <div class="right">
-                <div class="presupuesto_ingreso--valor">+ {{income}}</div>
+                <div class="presupuesto_ingreso--valor">+ {{income | currency:'ARG':'$':'1.2-2'}}</div>
                 <div class="presupuesto_ingreso--porcentaje">&nbsp;</div>
             </div>
         </div>
@@ -17,8 +17,8 @@
         <div class="presupuesto_egreso limpiarEstilos">
             <div class="presupuesto_egreso--text">Egresos</div>
             <div class="right limpiarEstilos">
-                <div class="presupuesto_egreso--valor">- {{expense}}</div>
-                <div class="presupuesto_egreso--porcentaje">{{expensePercentage}}%</div>
+                <div class="presupuesto_egreso--valor">- {{expense | currency:'ARG':'$':'1.2-2'}}</div>
+                <div class="presupuesto_egreso--porcentaje">{{expensePercentage | percent}}</div>
             </div>
         </div>
     </div>
