@@ -10,7 +10,7 @@ export class FormComponent {
     description: string;
     valueAdd: number;
     optionSelected: string  = 'ing';
-
+    type : string = 'ing';
     constructor(
         private movementService: MovementService,
         ){
@@ -20,10 +20,14 @@ export class FormComponent {
     onAddValues(){
         let movement = new Movement(this.description, this.valueAdd);
         var option = this.optionSelected;
-        if (option == 'ing'){
+        if (this.type == 'ing'){
             this.movementService.addIncome(movement);
         }else{
             this.movementService.addExpense(movement);
         }
+    }
+
+    typeOperation(event){
+        this.type = event.target.value;
     }
 }
